@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intake Questionnaire — TribalKnowledge</title>
+<meta name="description" content="Start your PLC documentation package: the 10-minute intake questionnaire.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="bolt" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+        <polygon points="13,1 23.4,7 23.4,19 13,25 2.6,19 2.6,7" fill="none" stroke="#f5a623" stroke-width="2"/>
+        <circle cx="13" cy="13" r="4.5" fill="none" stroke="#f5a623" stroke-width="2"/>
+      </svg>
+      <span>TRIBAL<em>KNOWLEDGE</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#package">The package</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="mailto:contact@slewfoot.dev">contact@slewfoot.dev</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hazard"></div>
+
+<header class="form-head">
+  <div class="wrap">
+    <span class="kicker">Step 1 of the pipeline</span>
+    <h1>Intake Questionnaire</h1>
+    <p class="lead">Ten minutes of your time now saves a week of back-and-forth later. Short answers are fine — and <strong>"I don't know" is a perfectly good answer</strong>; it tells us where the documentation gaps really are. If your most experienced person can sit with you while you fill this out, even better.</p>
+  </div>
+</header>
+
+<div class="wrap intake-grid">
+  <div>
+    <div id="result" role="status" aria-live="polite">
+      <h3>✔ Intake packet generated</h3>
+      <p>Your answers are formatted below as the intake document our pipeline starts from. <strong>It has been downloaded as a file</strong> — attach it to an email along with your PLC export, drawings, and photos, or just click "Open email" and paste it in.</p>
+      <pre id="packet-preview"></pre>
+      <div class="form-actions">
+        <button type="button" class="btn btn-solid" id="btn-mail">Open email to contact@slewfoot.dev</button>
+        <button type="button" class="btn btn-ghost on-light" id="btn-copy">Copy packet text</button>
+        <button type="button" class="btn btn-ghost on-light" id="btn-download">Download again (.md)</button>
+      </div>
+    </div>
+
+    <form class="intake" id="intake-form" novalidate>
+      <fieldset>
+        <legend>Contact</legend>
+        <div class="two-col">
+          <div>
+            <label for="company">Plant / company *</label>
+            <input type="text" id="company" name="company" required autocomplete="organization">
+          </div>
+          <div>
+            <label for="location">Plant location <span class="opt">(city, state)</span></label>
+            <input type="text" id="location" name="location">
+          </div>
+          <div>
+            <label for="contact-name">Your name *</label>
+            <input type="text" id="contact-name" name="contact-name" required autocomplete="name">
+          </div>
+          <div>
+            <label for="role">Your role *</label>
+            <input type="text" id="role" name="role" required placeholder="e.g., Maintenance Manager">
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div>
+            <label for="phone">Phone <span class="opt">(for quick questions)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>The machine</legend>
+        <label for="machine">Machine or line name — what your people actually call it *</label>
+        <input type="text" id="machine" name="machine" required placeholder='e.g., "the Line 4 sorter", "the old palletizer"'>
+
+        <label for="platform">Control platform <span class="opt">(best guess is fine)</span></label>
+        <select id="platform" name="platform">
+          <option value="">— select —</option>
+          <option>Allen-Bradley Logix (CompactLogix / ControlLogix)</option>
+          <option>Allen-Bradley legacy (SLC-500 / MicroLogix / PLC-5)</option>
+          <option>Siemens (TIA Portal / STEP 7)</option>
+          <option>Automation Direct</option>
+          <option>Mitsubishi / Omron / GE / other</option>
+          <option>Not sure</option>
+        </select>
+
+        <label for="q1">1. What does this machine do? *</label>
+        <p class="hint">One or two sentences, in plant language. ("Sorts cartons coming off Line 2 onto two shipping lanes and kicks out bad barcodes.")</p>
+        <textarea id="q1" name="q1" required></textarea>
+
+        <label for="q2">2. Who knows this machine best, and how long until they retire or leave?</label>
+        <p class="hint">Name/role is enough. If we may call them with questions, say so — 15 minutes with that person improves the package more than anything else.</p>
+        <textarea id="q2" name="q2"></textarea>
+
+        <label for="q3">3. What are the known quirks?</label>
+        <p class="hint">The stuff everyone "just knows": the thing you do after a power outage, the sensor you tap with a broom handle, the alarm everyone ignores. List as many as you can.</p>
+        <textarea id="q3" name="q3"></textarea>
+
+        <label for="q4">4. What's the biggest recurring failure? *</label>
+        <p class="hint">The thing that happens most often or hurts most. What do your people do when it happens today?</p>
+        <textarea id="q4" name="q4" required></textarea>
+
+        <label for="q5">5. When this machine is down, what does an hour of downtime cost (roughly)?</label>
+        <p class="hint">A rough number or "don't know." This helps us prioritize the troubleshooting guide.</p>
+        <input type="text" id="q5" name="q5">
+
+        <label for="q6">6. Have there been modifications since the original install?</label>
+        <p class="hint">New devices, logic changes, anything bypassed or jumpered? Were drawings ever updated to match?</p>
+        <textarea id="q6" name="q6"></textarea>
+
+        <label for="q7">7. Is the program file you'll send the same as what's running in the PLC?</label>
+        <select id="q7" name="q7">
+          <option value="">— select —</option>
+          <option>Yes — fresh upload from the processor</option>
+          <option>Probably, but not verified</option>
+          <option>Not sure</option>
+          <option>No / there may be differences</option>
+        </select>
+
+        <label for="q8">8. Anything you specifically want the documentation to cover?</label>
+        <p class="hint">E.g., "the changeover procedure," "what the SKIP button actually does," "why it faults every Monday morning."</p>
+        <textarea id="q8" name="q8"></textarea>
+      </fieldset>
+
+      <fieldset class="checks">
+        <legend>Materials you can send</legend>
+        <p class="hint">Check what you expect to be able to provide. Gaps are fine — they become written questions, not guesses.</p>
+        <label><input type="checkbox" name="materials" value="PLC program export (.ACD / L5X / TIA / PDF report)"> PLC program export (.ACD / L5X / TIA archive / PDF report)</label>
+        <label><input type="checkbox" name="materials" value="Scanned electrical drawings (redlines welcome)"> Scanned electrical drawings — redlined sets welcome</label>
+        <label><input type="checkbox" name="materials" value="HMI screenshots or HMI program file"> HMI screenshots (or the HMI program file)</label>
+        <label><input type="checkbox" name="materials" value="Machine photos incl. panel and hand-labeled devices"> Machine photos — panel, operator stations, anything hand-labeled</label>
+        <label><input type="checkbox" name="materials" value="Network info / IP addresses"> Network info / IP addresses (even a hand sketch)</label>
+        <label><input type="checkbox" name="materials" value="NEEDS EXPORT INSTRUCTIONS"> We'd like export instructions for our platform</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pricing tier</legend>
+        <label style="font-weight:500; display:flex; gap:0.55rem; align-items:baseline;">
+          <input type="radio" name="tier" value="Trial — $1,500" checked> First trial job — $1,500 (introductory rate)
+        </label>
+        <label style="font-weight:500; display:flex; gap:0.55rem; align-items:baseline;">
+          <input type="radio" name="tier" value="Standard — $3,500"> Standard — $3,500 per machine/line
+        </label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-solid">Generate my intake packet</button>
+        <span class="hint" style="align-self:center;">Nothing is sent automatically — you'll review it first.</span>
+      </div>
+    </form>
+  </div>
+
+  <aside class="side-panel">
+    <h3>What happens to this form</h3>
+    <ol>
+      <li>Your answers become a formatted intake packet — <span class="mono">intake-&lt;plant&gt;-&lt;machine&gt;.md</span> — the exact document our pipeline's <strong>Step&nbsp;0 (intake review)</strong> starts from.</li>
+      <li>You email it to <span class="mono">contact@slewfoot.dev</span> with your program export, drawings, and photos attached (ask for an upload link for files over 20&nbsp;MB).</li>
+      <li>We confirm receipt within 2 business days and send <em>one</em> consolidated list of anything missing — we don't drip-feed requests.</li>
+      <li>You get a delivery date. Typical turnaround: 2–3 weeks from complete intake.</li>
+    </ol>
+    <h3>Confidentiality</h3>
+    <p style="font-size:0.9rem;">Your files are used only to produce your package, never shared or reused, and deleted on request after delivery. Happy to sign your NDA.</p>
+  </aside>
+</div>
+
+<div class="hazard"></div>
+
+<footer class="colophon">
+  <div class="wrap">
+    TribalKnowledge · Fixed-price PLC documentation for end-user plants ·
+    <a href="mailto:contact@slewfoot.dev">contact@slewfoot.dev</a>
+  </div>
+</footer>
+
+<script src="js/intake.js"></script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TribalKnowledge — PLC documentation for the machines only one person understands</title>
+<meta name="description" content="Fixed-price PLC documentation packages for end-user plants. Send your program export and drawings; get back plain-English documentation your whole crew can use.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="bolt" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+        <polygon points="13,1 23.4,7 23.4,19 13,25 2.6,19 2.6,7" fill="none" stroke="#f5a623" stroke-width="2"/>
+        <circle cx="13" cy="13" r="4.5" fill="none" stroke="#f5a623" stroke-width="2"/>
+      </svg>
+      <span>TRIBAL<em>KNOWLEDGE</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#package">The package</a>
+      <a href="#sample">Sample</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">Who we are</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-solid" href="intake.html">Start intake</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Fixed-price PLC documentation packages</span>
+      <h1>Your machine runs on code <span class="amber">one person</span> understands.<br>Write it down before they walk out the door.</h1>
+      <p class="sub">You send your PLC program export, scanned drawings, and HMI screenshots. We send back a complete, plain-English documentation package — sequence of operations, logic narrative, I/O list, alarms, troubleshooting guide, and network diagram. No site visit. Fixed price.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="intake.html">Start the intake questionnaire</a>
+        <a class="btn btn-ghost" href="assets/Line4-Sorter-Documentation-Package.pdf">See a finished sample (PDF)</a>
+      </div>
+      <p class="micro">Allen-Bradley · Siemens · legacy platforms · end-user plants only</p>
+    </div>
+
+    <!-- Original illustration: two-lane sorter line. Drawn for this site; free of third-party rights. -->
+    <svg viewBox="0 0 640 400" role="img" aria-label="Illustration of a conveyor sorting line with a control panel, scanner, diverter, and stack light">
+      <!-- floor -->
+      <line x1="20" y1="330" x2="620" y2="330" stroke="#2a3946" stroke-width="3"/>
+      <!-- control panel -->
+      <g>
+        <rect x="488" y="96" width="118" height="200" rx="4" fill="#1d2832" stroke="#51626f" stroke-width="2"/>
+        <rect x="500" y="112" width="94" height="62" rx="2" fill="#e8edf1"/>
+        <rect x="507" y="120" width="56" height="6" fill="#51626f"/>
+        <rect x="507" y="132" width="80" height="6" fill="#9fb0bc"/>
+        <rect x="507" y="144" width="68" height="6" fill="#9fb0bc"/>
+        <rect x="507" y="156" width="40" height="6" fill="#f5a623"/>
+        <circle cx="514" cy="196" r="8" fill="#3f9d63"/>
+        <circle cx="540" cy="196" r="8" fill="#c4452e"/>
+        <circle cx="566" cy="196" r="8" fill="#f5a623"/>
+        <rect x="504" y="218" width="86" height="22" rx="2" fill="#2a3946"/>
+        <text x="547" y="233" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#9fb0bc">LINE 4</text>
+        <line x1="500" y1="296" x2="500" y2="330" stroke="#51626f" stroke-width="4"/>
+        <line x1="594" y1="296" x2="594" y2="330" stroke="#51626f" stroke-width="4"/>
+      </g>
+      <!-- stack light -->
+      <g>
+        <line x1="60" y1="330" x2="60" y2="170" stroke="#51626f" stroke-width="5"/>
+        <rect x="48" y="106" width="24" height="22" rx="3" fill="#c4452e" opacity="0.35"/>
+        <rect x="48" y="128" width="24" height="22" rx="3" fill="#f5a623" opacity="0.35"/>
+        <rect x="48" y="150" width="24" height="22" rx="3" fill="#3f9d63"/>
+        <rect x="44" y="98" width="32" height="8" rx="2" fill="#2a3946"/>
+      </g>
+      <!-- scanner gantry -->
+      <g>
+        <line x1="238" y1="330" x2="238" y2="150" stroke="#51626f" stroke-width="4"/>
+        <line x1="318" y1="330" x2="318" y2="150" stroke="#51626f" stroke-width="4"/>
+        <rect x="232" y="142" width="92" height="10" fill="#2a3946"/>
+        <rect x="266" y="152" width="24" height="16" rx="2" fill="#1d2832" stroke="#51626f"/>
+        <line x1="278" y1="168" x2="278" y2="252" stroke="#c4452e" stroke-width="2" stroke-dasharray="4 4"/>
+      </g>
+      <!-- conveyor -->
+      <g>
+        <rect x="90" y="264" width="460" height="14" fill="#2a3946"/>
+        <g fill="#9fb0bc">
+          <circle cx="110" cy="271" r="7"/><circle cx="150" cy="271" r="7"/>
+          <circle cx="190" cy="271" r="7"/><circle cx="230" cy="271" r="7"/>
+          <circle cx="270" cy="271" r="7"/><circle cx="310" cy="271" r="7"/>
+          <circle cx="350" cy="271" r="7"/><circle cx="390" cy="271" r="7"/>
+          <circle cx="430" cy="271" r="7"/><circle cx="470" cy="271" r="7"/>
+          <circle cx="510" cy="271" r="7"/><circle cx="530" cy="271" r="7"/>
+        </g>
+        <line x1="120" y1="278" x2="120" y2="330" stroke="#51626f" stroke-width="4"/>
+        <line x1="300" y1="278" x2="300" y2="330" stroke="#51626f" stroke-width="4"/>
+        <line x1="460" y1="278" x2="460" y2="330" stroke="#51626f" stroke-width="4"/>
+      </g>
+      <!-- cartons -->
+      <g>
+        <rect x="128" y="222" width="48" height="42" fill="#caa36a" stroke="#8a6d3b" stroke-width="2"/>
+        <line x1="152" y1="222" x2="152" y2="264" stroke="#8a6d3b" stroke-width="2"/>
+        <rect x="254" y="222" width="48" height="42" fill="#caa36a" stroke="#8a6d3b" stroke-width="2"/>
+        <line x1="278" y1="222" x2="278" y2="264" stroke="#8a6d3b" stroke-width="2"/>
+        <rect x="262" y="230" width="20" height="12" fill="#e8edf1"/>
+        <rect x="384" y="222" width="48" height="42" fill="#caa36a" stroke="#8a6d3b" stroke-width="2"/>
+        <line x1="408" y1="222" x2="408" y2="264" stroke="#8a6d3b" stroke-width="2"/>
+      </g>
+      <!-- diverter arm -->
+      <g>
+        <circle cx="444" cy="208" r="7" fill="#f5a623"/>
+        <line x1="444" y1="208" x2="402" y2="246" stroke="#f5a623" stroke-width="6" stroke-linecap="round"/>
+      </g>
+      <!-- reject chute -->
+      <g>
+        <polygon points="452,264 492,264 478,318 438,318" fill="#1d2832" stroke="#51626f" stroke-width="2"/>
+        <text x="464" y="298" text-anchor="middle" font-family="Consolas, monospace" font-size="10" fill="#9fb0bc">REJECT</text>
+      </g>
+      <!-- flow arrows -->
+      <g stroke="#f5a623" stroke-width="3" fill="none">
+        <line x1="96" y1="200" x2="136" y2="200"/>
+        <polygon points="136,194 148,200 136,206" fill="#f5a623" stroke="none"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap">
+    <span>30+ years in controls</span>
+    <span>Allen-Bradley &amp; Siemens</span>
+    <span>FANUC robotics</span>
+    <span>Conveyor &amp; sortation</span>
+    <span>Water / wastewater SCADA</span>
+    <span>Oil &amp; gas telemetry</span>
+    <span>Ignition</span>
+  </div>
+</div>
+
+<div class="fearband">
+  <div class="wrap">
+    <p class="fearline">"When your one guy who knows that machine retires, this is what you'll wish you had."</p>
+  </div>
+</div>
+
+<div class="hazard"></div>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <span class="kicker">How it works</span>
+    <h2>Three steps. No site visit. No hourly meter running.</h2>
+    <p class="lead">Every job follows the same documented pipeline — the same one used to produce the sample package below. Your intake form drops directly into step one.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="num">STEP 1 — YOU SEND</span>
+        <h3>Program, drawings, photos</h3>
+        <p>Your PLC export (.ACD / L5X, TIA Portal, or a PDF report — we'll send export instructions if you need them), scanned electrical drawings (redlined sets welcome), HMI screenshots, machine photos, and the 10-minute <a href="intake.html">intake questionnaire</a>.</p>
+      </div>
+      <div class="step">
+        <span class="num">STEP 2 — WE BUILD</span>
+        <h3>Rung by rung, point by point</h3>
+        <p>We parse the program, extract every I/O point and tag, map the logic routine by routine, and cross-reference your drawings and photos. Anything the files can't prove is flagged as a question for your staff — never guessed.</p>
+      </div>
+      <div class="step">
+        <span class="num">STEP 3 — YOU RECEIVE</span>
+        <h3>The complete package</h3>
+        <p>A six-part document, delivered as PDF in 2–3 weeks, checked against a mandatory quality checklist before it ships: every point, every routine, every alarm accounted for — with the counts to prove it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="package">
+  <div class="wrap">
+    <span class="kicker">The deliverable</span>
+    <h2>Six documents your crew will actually use</h2>
+    <div class="deliv">
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/><line x1="9" y1="12" x2="17" y2="12"/><line x1="9" y1="16" x2="17" y2="16"/></svg>
+        <h3>1 · Sequence of Operations</h3>
+        <p>What the machine does, step by step, in plain English — readable by anyone on the floor, not just the controls people.</p>
+      </div>
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="8,6 3,12 8,18"/><polyline points="16,6 21,12 16,18"/><line x1="13" y1="4" x2="11" y2="20"/></svg>
+        <h3>2 · Logic Narrative</h3>
+        <p>Every routine in the program explained — interlocks, timers, tracking, and the undocumented quirks your senior electrician carries in his head.</p>
+      </div>
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="14" x2="21" y2="14"/><line x1="9" y1="4" x2="9" y2="20"/></svg>
+        <h3>3 · Complete I/O List</h3>
+        <p>Every point — wired and spare — described and cross-referenced to your drawings, terminals, and network devices.</p>
+      </div>
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a6 6 0 0 0-6 6v4l-2 4h16l-2-4V9a6 6 0 0 0-6-6z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
+        <h3>4 · Alarm List</h3>
+        <p>Every alarm in the program, what actually causes it, and what the operator should do about it — including the misleading ones.</p>
+      </div>
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0-5.6 5L3 17.4 6.6 21l5.9-5.9a4 4 0 0 0 5-5.6l-3 3-2.5-2.5z"/></svg>
+        <h3>5 · Troubleshooting Guide</h3>
+        <p>The ten most likely failure modes for <em>your</em> machine — symptom, causes in order, and diagnostic steps an electrician can follow at 2 a.m.</p>
+      </div>
+      <div class="card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><line x1="6.5" y1="8" x2="10.8" y2="16"/><line x1="17.5" y1="8" x2="13.2" y2="16"/><line x1="7.5" y1="6" x2="16.5" y2="6"/></svg>
+        <h3>6 · Network Diagram</h3>
+        <p>What talks to what, every address, and what breaks when each link goes down. For many plants, the map that never existed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section quality">
+  <div class="wrap">
+    <span class="kicker">The quality rule</span>
+    <h2>Nothing is guessed. Ever.</h2>
+    <div class="cols">
+      <div>
+        <ul>
+          <li>Every package is run against a mandatory quality checklist before delivery — every physical I/O point reconciled against the program, every routine described, every alarm accounted for. The counts are written down and shipped with the package.</li>
+          <li>Anything the source materials can't prove becomes an entry in the <strong>"Open Questions for Plant Staff"</strong> appendix — a numbered list of exactly what to ask your most experienced person while you still can.</li>
+          <li>Customers tell us that list is worth as much as the document: it's the gap between your machine and your knowledge, written down for the first time.</li>
+        </ul>
+      </div>
+      <div class="stamp">SELF-CHECK — LINE 4 SORTER (SAMPLE)
+I/O points:     50 in export / 50 documented
+Routines:        8 in program /  8 described
+Alarms:         12 in program / 12 listed
+Open questions:  8 — routed to plant staff
+Result:         PASS</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sample">
+  <div class="wrap">
+    <span class="kicker">Proof, not promises</span>
+    <h2>Read a finished package before you spend a dollar</h2>
+    <div class="sample-flex">
+      <div>
+        <p class="lead">We built a complete package for a fictional two-lane carton sorting line — CompactLogix PLC, five drives, a barcode scanner, a reject pusher, and 24 years of one electrician's tribal knowledge. It's the exact document you'd receive, end to end.</p>
+        <ul class="sample-points">
+          <li>15 pages: all six sections plus the Open Questions appendix</li>
+          <li>Solves the plant's actual mysteries from the code — the unlabeled keyswitch, the alarm that lies, the fault that only clears by cycling a disconnect</li>
+          <li>Shipped with its passing self-check report</li>
+        </ul>
+        <a class="btn btn-ghost on-light" href="assets/Line4-Sorter-Documentation-Package.pdf">Download the sample package (PDF)</a>
+      </div>
+      <div class="doc-mock">
+        <svg viewBox="0 0 300 380" role="img" aria-label="Preview sketch of the sample documentation package cover">
+          <rect x="0" y="0" width="300" height="380" fill="#ffffff"/>
+          <rect x="0" y="0" width="300" height="10" fill="#f5a623"/>
+          <text x="150" y="58" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="bold" font-size="20" fill="#141b22">Line 4 Sorter</text>
+          <text x="150" y="80" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" fill="#51626f">Machine Documentation Package</text>
+          <line x1="40" y1="98" x2="260" y2="98" stroke="#dde4e9" stroke-width="2"/>
+          <g font-family="Segoe UI, sans-serif" font-size="10" fill="#2a3946">
+            <text x="44" y="124">1 · Sequence of Operations</text>
+            <text x="44" y="146">2 · Logic Narrative — 8 routines</text>
+            <text x="44" y="168">3 · I/O List — 50 points</text>
+            <text x="44" y="190">4 · Alarm List — 12 alarms</text>
+            <text x="44" y="212">5 · Troubleshooting — top 10</text>
+            <text x="44" y="234">6 · Network Diagram</text>
+            <text x="44" y="256">A · Open Questions — 8 items</text>
+          </g>
+          <g fill="#f5a623">
+            <circle cx="34" cy="120" r="3"/><circle cx="34" cy="142" r="3"/>
+            <circle cx="34" cy="164" r="3"/><circle cx="34" cy="186" r="3"/>
+            <circle cx="34" cy="208" r="3"/><circle cx="34" cy="230" r="3"/>
+            <circle cx="34" cy="252" r="3"/>
+          </g>
+          <rect x="40" y="290" width="220" height="52" fill="#e8edf1" rx="4"/>
+          <text x="150" y="312" text-anchor="middle" font-family="Consolas, monospace" font-size="9" fill="#2a3946">SELF-CHECK: PASS</text>
+          <text x="150" y="328" text-anchor="middle" font-family="Consolas, monospace" font-size="9" fill="#51626f">50/50 I/O · 8/8 routines · 12/12 alarms</text>
+          <text x="150" y="364" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="9" fill="#9fb0bc">SAMPLE — fictional customer</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hazard"></div>
+
+<section class="section alt" id="pricing">
+  <div class="wrap">
+    <span class="kicker">Pricing</span>
+    <h2>Fixed price. You know the number before you commit.</h2>
+    <div class="prices">
+      <div class="price-card featured">
+        <span class="flag">First trial jobs</span>
+        <div class="amount">$1,500</div>
+        <div class="per">per machine or line — limited introductory rate</div>
+        <ul>
+          <li>The complete six-part package, nothing held back</li>
+          <li>Same mandatory quality checklist</li>
+          <li>Reduced rate while we build our reference list</li>
+          <li>If it isn't obviously worth full price, don't order another</li>
+        </ul>
+        <a class="btn btn-solid" href="intake.html">Claim a trial slot</a>
+      </div>
+      <div class="price-card">
+        <div class="amount">$3,500</div>
+        <div class="per">per machine or line — standard rate</div>
+        <ul>
+          <li>Complete six-part documentation package</li>
+          <li>Open Questions appendix + free revision B after your staff answers them</li>
+          <li>Typical turnaround 2–3 weeks from complete intake</li>
+          <li>Multi-machine plants: ask about scheduling a series</li>
+        </ul>
+        <a class="btn btn-ghost on-light" href="intake.html">Start intake</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <span class="kicker">Who's doing the work</span>
+    <h2>30+ years of hands-on controls engineering</h2>
+    <div class="about-grid">
+      <div>
+        <p class="lead">This isn't a documentation mill. Every package is built by a senior controls engineer who has spent a career inside exactly these machines:</p>
+        <ul>
+          <li>USAF communications and navigation systems</li>
+          <li>Allen-Bradley and Siemens PLCs, across generations of hardware</li>
+          <li>FANUC robots</li>
+          <li>Warehouse automation and conveyor controls for major retailers</li>
+          <li>Water / wastewater SCADA (Wonderware)</li>
+          <li>Oil &amp; gas SCADA with radio telemetry</li>
+          <li>Ignition Vision &amp; Perspective development</li>
+        </ul>
+        <p>The undocumented machine kept alive by one person's memory isn't a marketing angle here. It's been the recurring problem of an entire career — and the reason this business exists.</p>
+      </div>
+      <div class="boundary">
+        <h3>One boundary, stated plainly</h3>
+        <p>We document <strong>your own existing machines, for you, the end user.</strong></p>
+        <ul>
+          <li>No work for equipment OEMs or machine builders</li>
+          <li>No reuse of anyone else's code or designs — ever</li>
+          <li>Your files are confidential, used only for your package, and deleted on request after delivery</li>
+        </ul>
+        <p>If a request falls outside that lane, we decline it. That's what keeps this clean for everyone — including you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt faq" id="faq">
+  <div class="wrap">
+    <span class="kicker">Questions we get</span>
+    <h2>FAQ</h2>
+    <details>
+      <summary>We don't know how to export our PLC program. Is that a problem?</summary>
+      <p>No. Tell us your platform on the intake form and we'll send step-by-step export instructions for your software — usually a 10-minute job for whoever maintains the PLC. Best practice is a fresh upload from the running processor, and we'll walk you through that too.</p>
+    </details>
+    <details>
+      <summary>Our drawings are ancient and covered in pen marks. Should we even send them?</summary>
+      <p>Yes — especially those. The redlined set is the truthful set. Phone photos of paper prints are completely fine.</p>
+    </details>
+    <details>
+      <summary>How do you handle confidentiality?</summary>
+      <p>Your program files and drawings are used only to produce your package, are never shared or reused, and are deleted on request after delivery. We're happy to sign your NDA.</p>
+    </details>
+    <details>
+      <summary>What platforms do you cover?</summary>
+      <p>Allen-Bradley Logix (CompactLogix/ControlLogix) and legacy (SLC-500, MicroLogix, PLC-5), Siemens (TIA Portal, STEP 7), and most others — Automation Direct, Mitsubishi, Omron, GE. If you're unsure, ask; we'll tell you straight whether it's a fit.</p>
+    </details>
+    <details>
+      <summary>What if the program doesn't match what's actually running?</summary>
+      <p>The intake asks exactly that question. If you're not sure, we'll flag it and recommend a fresh upload from the processor first — documenting the wrong file helps nobody, and we'd rather wait a day for the right one.</p>
+    </details>
+    <details>
+      <summary>Can you fix the problems you find in our logic?</summary>
+      <p>The package will name them precisely (the sample found a missing drive fault-reset and an alarm pointing at the wrong message). Small corrective recommendations are included in writing; implementation is your team's or your integrator's call — we'll hand them everything they need.</p>
+    </details>
+  </div>
+</section>
+
+<section class="section foot-cta">
+  <div class="wrap">
+    <h2>Start with the 10-minute intake — or just ask for the sample</h2>
+    <p>No commitment either way. The intake form generates your packet automatically; the sample shows you exactly what you're buying.</p>
+    <div class="cta-row" style="justify-content:center; display:flex; gap:1rem; flex-wrap:wrap;">
+      <a class="btn btn-solid" href="intake.html">Start intake</a>
+      <a class="btn btn-ghost" href="mailto:contact@slewfoot.dev?subject=PLC%20documentation%20%E2%80%94%20sample%20package%20request">Email us</a>
+    </div>
+    <p style="margin-top:1.2rem;"><a class="email" href="mailto:contact@slewfoot.dev">contact@slewfoot.dev</a></p>
+  </div>
+</section>
+
+<div class="hazard"></div>
+
+<footer class="colophon">
+  <div class="wrap">
+    TribalKnowledge · Fixed-price PLC documentation for end-user plants ·
+    <a href="mailto:contact@slewfoot.dev">contact@slewfoot.dev</a><br>
+    All illustrations on this site are original works created for TribalKnowledge.
+  </div>
+</footer>
+
+</body>
+</html>
